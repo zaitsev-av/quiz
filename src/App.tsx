@@ -4,6 +4,7 @@ import { RootStateType } from "./state/store";
 import { useState } from "react";
 import { Question } from "./components/Question";
 import { CheckResultAC, QuizStateTypeReducer, RemoveQuestionAC } from "./state/questionReducer";
+import { EndQuiz } from "./components/EndQuiz/EndQuiz";
 
 
 
@@ -33,7 +34,8 @@ function App() {
                     <span>Question: {count}</span>
                 </>
                 :
-                <span>Correct: {state.count}</span>
+                <EndQuiz/>
+                // <span>Correct: {state.count}</span>
           
                 
             }

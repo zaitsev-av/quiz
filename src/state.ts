@@ -12,7 +12,7 @@ export type OptionsType = {
 }
  export const quiz: QuizStateType[] = [
 	{   id: v1(),
-		question: "1. Какой тип данных используется для обозначения чисел в JavaScript?",
+		question: "Какой тип данных используется для обозначения чисел в JavaScript?",
 		options: [
 			{ id: 1, answer: "string", correct: false },
 			{ id: 2, answer: "number", correct: true },
@@ -21,7 +21,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "2. Что такое JSX в React?",
+		question: "Что такое JSX в React?",
 		options: [
 			{ id: 1, answer: "Модульный синтаксис JavaScript", correct: false },
 			{
@@ -34,7 +34,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "3. Как создать функциональный компонент в React?",
+		question: "Как создать функциональный компонент в React?",
 		options: [
 			{ id: 1, answer: "class MyComponent extends React.Component", correct: false },
 			{ id: 2, answer: "const MyComponent = () => {...}", correct: true },
@@ -43,7 +43,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "4. Что такое props в React?",
+		question: "Что такое props в React?",
 		options: [
 			{ id: 1, answer: "Стандартные свойства HTML-элементов", correct: false },
 			{
@@ -56,9 +56,9 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "5. Как добавить класс к элементу в React?",
+		question: "Как добавить класс к элементу в React?",
 		options: [
-			{ id: 1, answer: "const element = <div class='my-class' />", correct: false },
+			{ id: 1, answer: "const element = <div class='my-class' /> ", correct: false },
 			{ id: 2, answer: "const element = <div className='my-class' />", correct: true },
 			{ id: 3, answer: "const element = <div class='my-class'></div>", correct: false }
 		]
@@ -74,7 +74,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "7. Как изменить состояние компонента в React?",
+		question: "Как изменить состояние компонента в React?",
 		options: [
 			{ id: 1, answer: "this.props.state = {...}", correct: false },
 			{ id: 2, answer: "const newState = {...}; this.state = newState;", correct: false },
@@ -83,7 +83,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "8. Что такое useEffect в React?",
+		question: "Что такое useEffect в React?",
 		options: [
 			{ id: 1, answer: "Функция, которая вызывается при каждом рендере компонента", correct: false },
 			{
@@ -96,7 +96,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "9. Что такое TypeScript?",
+		question: "Что такое TypeScript?",
 		options: [
 			{
 				id: 1,
@@ -109,7 +109,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "10. Как объявить переменную в TypeScript?",
+		question: "Как объявить переменную в TypeScript?",
 		options: [
 			{ id: 1, answer: "var myVar: number = 10;", correct: false },
 			{ id: 2, answer: "let myVar = 10;", correct: false },
@@ -118,7 +118,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "11. Что такое интерфейс в TypeScript?",
+		question: "Что такое интерфейс в TypeScript?",
 		options: [
 			{ id: 1, answer: "Описание формата объекта или класса", correct: true },
 			{ id: 2, answer: "Функция, которая выполняет определенную задачу", correct: false },
@@ -127,7 +127,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "12. Как указать тип переменной в TypeScript?",
+		question: "Как указать тип переменной в TypeScript?",
 		options: [
 			{ id: 1, answer: "let myVar = 10;", correct: false },
 			{ id: 2, answer: "let myVar: number = 10;", correct: true },
@@ -136,7 +136,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "13. Что такое дженерики (generics) в TypeScript?",
+		question: "Что такое дженерики (generics) в TypeScript?",
 		options: [
 			{
 				id: 1,
@@ -149,7 +149,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "14. Как указать тип аргументов и возвращаемого значения функции в TypeScript?",
+		question: "Как указать тип аргументов и возвращаемого значения функции в TypeScript?",
 		options: [
 			{ id: 1, answer: "const myFunc = (arg1, arg2) => {...}", correct: false },
 			{ id: 2, answer: "const myFunc = (arg1: number, arg2: string): boolean => {...}", correct: true },
@@ -158,7 +158,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "15. Что такое массивы в JavaScript?",
+		question: "Что такое массивы в JavaScript?",
 		options: [
 			{ id: 1, answer: "Структура данных, которая хранит ключ-значение", correct: false },
 			{ id: 2, answer: "Структура данных, которая хранит набор элементов", correct: true },
@@ -167,7 +167,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "16. Как добавить элемент в конец массива в JavaScript?",
+		question: "Как добавить элемент в конец массива в JavaScript?",
 		options: [
 			{ id: 1, answer: "myArray.add(element);", correct: false },
 			{ id: 2, answer: "myArray.push(element);", correct: true },
@@ -176,7 +176,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "17. Как удалить элемент из массива в JavaScript?",
+		question: "Как удалить элемент из массива в JavaScript?",
 		options: [
 			{ id: 1, answer: "myArray.splice(index, 1);", correct: true },
 			{ id: 2, answer: "myArray.remove(element);", correct: false },
@@ -185,7 +185,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "18. Как отсортировать массив в JavaScript?",
+		question: "Как отсортировать массив в JavaScript?",
 		options: [
 			{ id: 1, answer: "myArray.sort();", correct: true },
 			{ id: 2, answer: "myArray.orderBy();", correct: false },
@@ -194,7 +194,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "19. Что такое метод map в JavaScript?",
+		question: "Что такое метод map в JavaScript?",
 		options: [
 			{
 				id: 1,
@@ -207,7 +207,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "20. Как создать объект в JavaScript?",
+		question: "Как создать объект в JavaScript?",
 		options: [
 			{ id: 1, answer: "object myObj = new Object();", correct: false },
 			{ id: 2, answer: "const myObj = {key1: value1, key2: value2};", correct: false },
@@ -216,7 +216,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "21. Что такое методы объекта в JavaScript?",
+		question: "Что такое методы объекта в JavaScript?",
 		options: [
 			{
 				id: 1,
@@ -229,7 +229,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "22. Как получить значение свойства объекта в JavaScript?",
+		question: "Как получить значение свойства объекта в JavaScript?",
 		options: [
 			{ id: 1, answer: "myObj.getValue(property);", correct: false },
 			{ id: 2, answer: "myObj.property;", correct: true },
@@ -238,7 +238,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "23. Что такое функции обратного вызова (callback) в JavaScript?",
+		question: "Что такое функции обратного вызова (callback) в JavaScript?",
 		options: [
 			{
 				id: 1,
@@ -251,7 +251,7 @@ export type OptionsType = {
 	},
 	{
 		id: v1(),
-		question: "24. Как создать функцию обратного вызова в JavaScript?",
+		question: "Как создать функцию обратного вызова в JavaScript?",
 		options: [
 			{ id: 1, answer: "const myCallback = (arg1, arg2) => {...}", correct: true },
 			{ id: 2, answer: "function myCallback(arg1, arg2) {...}", correct: false },

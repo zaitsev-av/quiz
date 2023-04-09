@@ -20,19 +20,22 @@ export const Question: React.FC<QuestionPropsType> = ( props ) => {
 	
 	return (
 		<div className={s.card}>
+			{/*добавить где-нибудь шкалу прогресса */}
 			<div className={s.card2}>
 			<h2>{ state[ num ].question }</h2>
+			
 			<div>{ state[ num ].options.map( el => {
 				const onClickButtonHandler = () => {
 					debugger
+					console.log(state[ num ].question)
 					checkResult(state[num].id, el.id, num)
 					removeQuestionHandler(state[num].id)//подправть аргументы этой функции
 					setCount(count+1)
 				}
 				return (
-					<div key={el.id}>
+					<div className={s.question} key={el.id}>
 						<span>{ el.answer }</span>
-						<button onClick={onClickButtonHandler}>+</button>
+						<button onClick={onClickButtonHandler}>+</button> {/*сделать эту div отдельным компонентом, и повесить онклик на div для выбора ответа */}
 					</div>
 					
 				)
