@@ -1,5 +1,6 @@
 import React from 'react';
 import { QuizStateType } from "../state";
+import s from './Question.module.css'
 
 
 export type QuestionPropsType = {
@@ -18,7 +19,8 @@ export const Question: React.FC<QuestionPropsType> = ( props ) => {
 	const num = randomInteger( 0, 30 )
 	
 	return (
-		<>
+		<div className={s.card}>
+			<div className={s.card2}>
 			<h2>{ state[ num ].question }</h2>
 			<div>{ state[ num ].options.map( el => {
 				const onClickButtonHandler = () => {
@@ -35,7 +37,7 @@ export const Question: React.FC<QuestionPropsType> = ( props ) => {
 					
 				)
 			} ) }</div>
-			
-		</>
+			</div>
+		</div>
 	);
 };
