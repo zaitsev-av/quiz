@@ -1,4 +1,4 @@
-import './App.css'
+import s from './App.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { RootStateType } from "./state/store";
 import { useState } from "react";
@@ -12,7 +12,7 @@ function App() {
     const state = useSelector<RootStateType, QuizStateTypeReducer>( state => state.questionReducer )
     const dispatch = useDispatch()
     // Количество вопросов в одном тесте будет 10
-    const [ count, setCount ] = useState<number>( 0 )// будем считать ответы
+    const [ count, setCount ] = useState<number>( 1 )// будем считать ответы
     
     const removeQuestionHandler = (id: string ) => {
         dispatch(RemoveQuestionAC(id))
@@ -21,7 +21,7 @@ function App() {
         dispatch(CheckResultAC(id, questionID, num))
     }
     return (
-        <div className="App">
+        <div className={ s.App }>
             {count <= 10 ?
                 <>
                     <Question state={ state.quizState }
@@ -30,7 +30,9 @@ function App() {
                             removeQuestionHandler={ removeQuestionHandler }
                     checkResult={checkResult}
                     />
-                    <span>Scale: { count * 10 }</span>
+                    {/*<div className={ s.progress }>*/}
+                    {/*	<div style={{ width: `${count*10}%` }} className={ s.inner }></div>*/}
+                    {/*</div>*/}
                     <span>Question: {count}</span>
                 </>
                 :

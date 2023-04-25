@@ -12,6 +12,7 @@ const initialState:QuizStateTypeReducer = {
 }
 type ActionType = ReturnType<typeof RemoveQuestionAC> | ReturnType<typeof CheckResultAC>
 export const questionReducer = ( state: QuizStateTypeReducer = initialState, action: ActionType ): QuizStateTypeReducer => {
+	debugger
 	switch ( action.type ) {
 		case "CHECK-RESULT": {
 			debugger

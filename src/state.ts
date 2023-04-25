@@ -10,7 +10,7 @@ export type OptionsType = {
 	answer: string
 	correct: boolean
 }
- export const quiz: QuizStateType[] = [
+export const quiz: QuizStateType[] = [
 	{   id: v1(),
 		question: "Какой тип данных используется для обозначения чисел в JavaScript?",
 		options: [
