@@ -2,9 +2,11 @@ import s from './App.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { RootStateType } from "./state/store";
 import { useState } from "react";
-import { Question } from "./components/Question";
+import { Questions } from "./components/Game/Questions/Questions";
 import { CheckResultAC, QuizStateTypeReducer, RemoveQuestionAC } from "./state/questionReducer";
 import { EndQuiz } from "./components/EndQuiz/EndQuiz";
+import { Header } from "./components/Header/Header";
+import { Progress } from "./components/Progress/Progress";
 
 
 
@@ -21,18 +23,20 @@ function App() {
         dispatch(CheckResultAC(id, questionID, num))
     }
     return (
-        <div className={ s.App }>
+        <>
+            <Header/>
+            <Progress count={count}/>
+        <div className={ s.app }>
             {count <= 10 ?
                 <>
-                    <Question state={ state.quizState }
+                    <Questions
+                        state={ state.quizState }
                             setCount={ setCount }
                             count={ count }
                             removeQuestionHandler={ removeQuestionHandler }
                     checkResult={checkResult}
                     />
-                    {/*<div className={ s.progress }>*/}
-                    {/*	<div style={{ width: `${count*10}%` }} className={ s.inner }></div>*/}
-                    {/*</div>*/}
+                   
                     <span>Question: {count}</span>
                 </>
                 :
@@ -42,6 +46,7 @@ function App() {
                 
             }
         </div>
+        </>
     )
 }
 

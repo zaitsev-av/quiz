@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "../Question.module.css";
+import s from "../Game/Questions/Questions.module.css";
 
 export type FakeButtonPropsType = {
 	answer: string
