@@ -3,18 +3,21 @@
   padding: 2rem;
   text-align: center;
 }
+
 .app {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-flow: column wrap;
   align-items: center;
-  flex-wrap: wrap;
-  color: white;
+  justify-content: center;
+
   margin-top: 50px;
+
+  color: white;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }

@@ -79,7 +79,7 @@ export const quiz: QuizStateType[] = [
       },
       {
         id: 2,
-        answer: "const element = <div className='my-class' />",
+        answer: "const element = <div  className='my-class' />",
         correct: true,
       },
       {

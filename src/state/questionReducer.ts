@@ -9,6 +9,7 @@ const initialState: QuizStateTypeReducer = {
   count: 0,
   quizState: quiz,
 }
+
 type ActionType = ReturnType<typeof RemoveQuestionAC> | ReturnType<typeof CheckResultAC>
 export const questionReducer = (
   state: QuizStateTypeReducer = initialState,

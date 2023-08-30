@@ -1,6 +1,7 @@
-import { FakeButton } from '../../../FakeButton/FakeButton'
-import { QuizStateType } from '../../../../state'
 import { FC } from 'react'
+
+import { QuizStateType } from '../../../../state'
+import { FakeButton } from '../../../FakeButton/FakeButton'
 
 export type QuestionPropsType = {
   state: QuizStateType[]
@@ -12,6 +13,7 @@ export type QuestionPropsType = {
 }
 export const Question: FC<QuestionPropsType> = props => {
   const { num, count, setCount, checkResult, removeQuestionHandler, state } = props
+
   return (
     <div>
       {state[num].options.map(el => {
@@ -21,6 +23,7 @@ export const Question: FC<QuestionPropsType> = props => {
           removeQuestionHandler(state[num].id)
           setCount(count + 1)
         }
+
         return <FakeButton key={el.id} answer={el.answer} callBack={onClickButtonHandler} />
       })}
     </div>

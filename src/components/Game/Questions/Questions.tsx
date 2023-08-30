@@ -1,7 +1,9 @@
-import { QuizStateType } from '../../../state'
-import s from './Questions.module.css'
-import { Question } from './Question/Question'
 import { FC } from 'react'
+
+import { QuizStateType } from '../../../state'
+
+import { Question } from './Question/Question'
+import s from './Questions.module.css'
 
 export type QuestionPropsType = {
   state: QuizStateType[]
