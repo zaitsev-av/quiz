@@ -1,17 +1,14 @@
 import { useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import s from './App.module.css'
-import { Header } from './components'
-import { EndQuiz } from './components/EndQuiz/EndQuiz'
-import { Questions } from './components/Game/Questions/Questions'
 import { Layout } from './components/layout/layout'
-import { Progress } from './components/Progress/Progress'
+import { QuizDirectionSelectorPage } from './pages/quiz-direction-selector-page/quiz-direction-selector-page'
 import { CheckResultAC, QuizStateTypeReducer, RemoveQuestionAC } from './state/questionReducer'
 import { RootStateType } from './state/store'
 
-function App() {
+export const App = () => {
   const state = useSelector<RootStateType, QuizStateTypeReducer>(state => state.questionReducer)
   const dispatch = useDispatch()
   // Количество вопросов в одном тесте будет 10
@@ -23,10 +20,34 @@ function App() {
   const checkResult = (id: string, questionID: number, num: number) => {
     dispatch(CheckResultAC(id, questionID, num))
   }
+  const routes = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <QuizDirectionSelectorPage />,
+        },
+        {
+          path: '/js',
+          element: <div>js</div>,
+        },
+        {
+          path: '/react',
+          element: <div>React</div>,
+        },
+        {
+          path: '/redux',
+          element: <div>Redux</div>,
+        },
+      ],
+    },
+  ])
 
   return (
     <>
-      <Layout />
+      <RouterProvider router={routes} />
       {/*<Header />*/}
       {/*<Progress count={count} />*/}
       {/*<div className={s.app}>*/}
@@ -52,5 +73,3 @@ function App() {
     </>
   )
 }
-
-export default App
