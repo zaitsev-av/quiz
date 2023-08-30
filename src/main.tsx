@@ -1,7 +1,11 @@
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/700.css'
 import { createRoot } from 'react-dom/client'
-import App from './App'
-import './index.css'
 import { Provider } from 'react-redux'
+
+import '../src/styles/index.scss'
+
+import App from './App'
 import { store } from './state/store'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
@@ -9,6 +13,3 @@ createRoot(document.getElementById('root') as HTMLElement).render(
     <App />
   </Provider>
 )
-
-// @ts-ignore
-window.store

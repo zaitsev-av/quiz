@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  button {
+    all: unset;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 200px;
+    min-height: 150px;
+
+    background: #3bd387;
+    border-radius: 5px;
+
+    &:hover {
+      background: #0da157;
+    }
+  }
+}
