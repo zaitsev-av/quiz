@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react'
 
 import s from './page.module.scss'
 type Props = PropsWithChildren<{
-  mt?: number
+  mt?: string
 }>
 export const Page: FC<Props> = ({ children, mt = '2rem' }) => {
   return (

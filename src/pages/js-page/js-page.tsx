@@ -21,7 +21,7 @@ export const JsPage: FC = () => {
   }
 
   return (
-    <Page>
+    <Page mt={'5rem'}>
       <Questions
         state={state.quizState}
         setCount={setCount}
